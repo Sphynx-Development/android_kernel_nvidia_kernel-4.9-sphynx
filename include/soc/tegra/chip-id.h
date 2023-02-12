@@ -314,6 +314,10 @@ static inline bool tegra_platform_is_sim(void)
 {
 	return tegra_platform_is_vdk();
 }
+static inline bool tegra_platform_is_unit_fpga(void)
+{
+	return false;
+}
 
 extern void tegra_set_tegraid(u32 chipid, u32 major, u32 minor,
 	u32 pre_si_plat, u32 nlist, u32 patch, const char *priv);
@@ -325,3 +329,4 @@ extern u8 tegra_get_chip_id(void);
 #endif /* __ASSEMBLY__ */
 
 #endif /* __SOC_TEGRA_CHIP_ID_H_ */
+
